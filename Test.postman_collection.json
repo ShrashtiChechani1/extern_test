@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "9b7aa220-6c5c-4796-ac22-09e5ef9cf10d",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25894729"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"harshita\",\r\n    \"email\":\"abc@gmail.com\",\r\n    \"password\":\"Harsh@123\",\r\n    \"confirm_password\":\"Harsh@123\",\r\n    \"phone_number\":\"9876543210\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"harshita\",\r\n    \"email\":\"abc@gmail.com\",\r\n    \"password\":\"Harsh@123\",\r\n    \"confirm_password\":\"Harsh@123\",\r\n    \"phone_number\":\"9876543210\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"abc@gmail.com\",\r\n    \"password\":\"Harsh@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/signin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkwODAwNTI3LCJqdGkiOiI1NDc2YTgwNTM2YTQ0Mjg3OTc4MzI5N2NkNzQ0OGFjOCIsInVzZXJfaWQiOjN9.wft3aavW0v_Rm7QdGx8II-LSaMvZEOCD-Jn0Lydoxi4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"user\",\r\n    \"description\":\"this is item add api\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/add_item/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"add_item",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload_image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkwODAyMTYxLCJqdGkiOiIyZGUzMGNjM2VmNzE0OGZjOGIxMTIwN2FiMDJlYzhhYyIsInVzZXJfaWQiOjN9.Pc4Y7nQHkSYPHQrTVlqEN2TjIF-ZPY-c1wSpN5DcW_Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "item_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/shrashti chechani/Pictures/Screenshots/Screenshot (273).png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/upload_image/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"upload_image",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_item",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkwODAxOTA4LCJqdGkiOiIwOWI0MjNiMGFlMmM0YTg2YmFlZjFjMzQwY2M3NzZlYSIsInVzZXJfaWQiOjN9.KhnjsMNvoGBgzeUnUQ_wGqK-cfR2zmRrimed5PnlEXo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"item_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/delete_item",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"delete_item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list_items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkwODAyMTYxLCJqdGkiOiIyZGUzMGNjM2VmNzE0OGZjOGIxMTIwN2FiMDJlYzhhYyIsInVzZXJfaWQiOjN9.Pc4Y7nQHkSYPHQrTVlqEN2TjIF-ZPY-c1wSpN5DcW_Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/list_items",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"list_items"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
