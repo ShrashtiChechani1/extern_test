@@ -19,9 +19,3 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.email
-
-class Permission(models.Model):
-    permission_name  = models.TextField(null=True,unique=True)
-    created_at  = models.DateTimeField(auto_now_add=True)
-    updated_at  = models.DateTimeField(auto_now=True)
-    end_point = models.TextField(null=True,default=[])

@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'exam.middleware.middleware.ItemPermissionsMiddleware'
+    # 'exam.middleware.CheckPermissionMiddleware',
 ]
 
 ROOT_URLCONF = 'extern_labs.urls'

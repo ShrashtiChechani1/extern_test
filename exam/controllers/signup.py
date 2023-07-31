@@ -35,7 +35,7 @@ def signup(request):
             }, status=status.HTTP_400_BAD_REQUEST)
 
         # Create the User instance
-        user = User.objects.create(email=email)
+        user = User.objects.create(username=email,email=email)
         user.set_password(password)
         user.save()
 
